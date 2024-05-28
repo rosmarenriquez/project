@@ -12,6 +12,18 @@ header {
     text-align: center;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -71,5 +83,14 @@ input, textarea {
         text-align: left;
         padding: 10px;
     }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-content .logo {
+        margin: 0 0 15px 0;
+    }
 }
+
 
