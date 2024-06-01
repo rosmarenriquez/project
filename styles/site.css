@@ -1,61 +1,116 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF;
-    color: #333333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #fffbe6;
+    color: #333;
 }
 
 header {
-    background-color: #FFA500;
-    padding: 20px;
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.header-content .logo {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 15px;
+.logo {
+    height: 50px;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #FFFFFF;
+    font-weight: bold;
 }
 
 main {
-    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-h1, h2 {
-    color: #FFA500;
+.welcome-section,
+.story-section,
+.offers-section,
+.testimonials-section {
+    background-color: #ffeb3b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.offers-section .offer {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.testimonials-section .testimonial {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    font-style: italic;
 }
 
 footer {
-    background-color: #FFA500;
-    padding: 10px;
+    background-color: #d32f2f;
+    color: #fff;
     text-align: center;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+footer p {
+    margin: 0;
+}
+
 
 form {
     display: flex;
@@ -93,4 +148,71 @@ input, textarea {
     }
 }
 
+
+#main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for each pizza card */
+.pizza-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.pizza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.pizza-card:hover img {
+    transform: scale(1.05);
+}
+
+.pizza-card h2 {
+    font-size: 1.8em;
+    margin: 16px 0 8px;
+    color: #333;
+}
+
+.pizza-card p {
+    font-size: 1em;
+    margin: 8px 0;
+    color: #666;
+}
+
+.pizza-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 223, 186, 0.3), rgba(255, 223, 186, 0));
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.pizza-card:hover::before {
+    transform: scale(1.5);
+}
 

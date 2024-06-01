@@ -1,27 +1,78 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function() {
+    const mainContent = document.getElementById('main-content');
+
     const pizzas = [
-        { name: 'Margherita Pizza', price: '$12', image: 'images/margherita.jpeg' },
-        { name: 'Pepperoni Pizza', price: '$14', image: 'images/pepperoni.jpg' },
-        { name: 'BBQ Chicken Pizza', price: '$16', image: 'images/bbq_chicken.jpg' },
-        { name: 'Vegetarian Pizza', price: '$13', image: 'images/vegetarian.jpg' },
-        { name: 'Four Cheese Pizza', price: '$15', image: 'images/four_cheese.jpg' }
+        {
+            pizzaName: "Margherita",
+            ingredients: "Tomato, Mozzarella, Basil",
+            size: "Medium",
+            price: 12.99,
+            imageUrl: "https://www.laespanolaaceites.com/wp-content/uploads/2019/06/pizza-margarita-1080x671.jpg"
+        },
+        {
+            pizzaName: "Pepperoni",
+            ingredients: "Tomato, Mozzarella, Pepperoni",
+            size: "Large",
+            price: 14.99,
+            imageUrl: "https://www.sortirambnens.com/wp-content/uploads/2019/02/pizza-de-peperoni.jpg"
+        },
+        {
+            pizzaName: "BBQ Chicken",
+            ingredients: "BBQ Sauce, Chicken, Red Onions, Cilantro",
+            size: "Large",
+            price: 16.99,
+            imageUrl: "https://www.jennycancook.com/wp-content/uploads/2015/03/BBQ_Chicken_Pizza_600.jpg"
+        },
+        {
+            pizzaName: "Veggie",
+            ingredients: "Tomato, Mozzarella, Bell Peppers, Olives, Onions",
+            size: "Medium",
+            price: 13.99,
+            imageUrl: "https://www.thecandidcooks.com/wp-content/uploads/2022/07/california-veggie-pizza-feature.jpg"
+        },
+        {
+            pizzaName: "Hawaiian",
+            ingredients: "Tomato, Mozzarella, Ham, Pineapple",
+            size: "Medium",
+            price: 14.49,
+            imageUrl: "https://img.kidspot.com.au/pZnR2nZu/kk/2015/03/hawaiian-pizza-recipe-605894-2.jpg"
+        }
     ];
 
-    const menuSection = document.querySelector('main section');
-    
+    // Function to create a pizza card
+    function createPizzaCard(pizza) {
+        const card = document.createElement('div');
+        card.className = 'pizza-card';
+        
+        const img = document.createElement('img');
+        img.src = pizza.imageUrl;
+        img.alt = pizza.pizzaName;
+        img.loading = 'lazy';
+
+        const name = document.createElement('h2');
+        name.textContent = pizza.pizzaName;
+
+        const ingredients = document.createElement('p');
+        ingredients.textContent = `Ingredients: ${pizza.ingredients}`;
+
+        const size = document.createElement('p');
+        size.textContent = `Size: ${pizza.size}`;
+
+        const price = document.createElement('p');
+        price.textContent = `Price: $${pizza.price.toFixed(2)}`;
+
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(ingredients);
+        card.appendChild(size);
+        card.appendChild(price);
+
+        return card;
+    }
+
+    // Render all pizza cards
     pizzas.forEach(pizza => {
-        const menuItem = document.createElement('div');
-        menuItem.classList.add('menu-item');
-
-        const image = document.createElement('img');
-        image.src = pizza.image;
-        image.alt = pizza.name;
-
-        const namePrice = document.createElement('p');
-        namePrice.textContent = `${pizza.name} - ${pizza.price}`;
-
-        menuItem.appendChild(image);
-        menuItem.appendChild(namePrice);
-        menuSection.appendChild(menuItem);
+        const pizzaCard = createPizzaCard(pizza);
+        mainContent.appendChild(pizzaCard);
     });
 });
