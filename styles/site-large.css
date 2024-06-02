@@ -1,0 +1,70 @@
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .welcome-section,
+    .story-section,
+    .offers-section,
+    .testimonials-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .offers-section .offer,
+    .testimonials-section .testimonial {
+        padding: 10px;
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .header-content {
+        padding: 0 10px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    main {
+        padding: 0 5px;
+    }
+
+    .welcome-section,
+    .story-section,
+    .offers-section,
+    .testimonials-section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .offers-section .offer,
+    .testimonials-section .testimonial {
+        padding: 8px;
+        margin: 5px 0;
+    }
+}
