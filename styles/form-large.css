@@ -1,0 +1,20 @@
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        max-width: 90%; /* Adjust as needed */
+    }
+
+    /* Optional: Adjust input and button sizes for smaller screens */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px; /* Decrease font size */
+        padding: 10px; /* Decrease padding */
+    }
+
+    button[type="submit"] {
+        padding: 12px 24px; /* Decrease padding */
+        font-size: 16px; /* Decrease font size */
+    }
+}
+

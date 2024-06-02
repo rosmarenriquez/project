@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fffbe6;
+    color: #333;
+}
+
+header {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer{
+	text-align: center;
+    padding: 20px 0;
+    background-color: #d32f2f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  footer p {
+    margin: 5px 0;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #c8ff00;
+}
+
+footer p span {
+    font-weight: bold;
+    color: #d0ff00;
+    font-family: 'Briem Hand', cursive;
+}
+
+#main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for each pizza card */
+.pizza-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.pizza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.pizza-card:hover img {
+    transform: scale(1.05);
+}
+
+.pizza-card h2 {
+    font-size: 1.8em;
+    margin: 16px 0 8px;
+    color: #333;
+}
+
+.pizza-card p {
+    font-size: 1em;
+    margin: 8px 0;
+    color: #666;
+}
+
+.pizza-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 223, 186, 0.3), rgba(255, 223, 186, 0));
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.pizza-card:hover::before {
+    transform: scale(1.5);
+}
+
+h2 {
+    text-align: center;
+}
