@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -13,6 +16,10 @@ header {
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 4px 2px -2px gray;
+}
+
+h1, h2, p {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header-content {
@@ -102,7 +109,7 @@ footer{
     padding: 20px 0;
     background-color: #d32f2f;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border-top: 1px solid #ccc;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -121,7 +128,7 @@ footer p:hover {
 footer p span {
     font-weight: bold;
     color: #d0ff00;
-    font-family: 'Briem Hand', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #myBtn {
